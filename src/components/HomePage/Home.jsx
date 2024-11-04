@@ -9,6 +9,7 @@ import useGetRandomContent from "../../hooks/useGetRandomContent";
 import { useContentStore } from "../../store/contentStore";
 import ContentList from "../ContentList";
 import { MOVIE_CATEGORIES, TV_CATEGORIES } from "../../utils/constants";
+import Footer from "../footer";
 
 const Home = () => {
   //api call
@@ -73,6 +74,7 @@ const Home = () => {
               <ContentList key={category} category={category} />
             ))}
       </div>
+      <Footer />
     </>
   );
 };

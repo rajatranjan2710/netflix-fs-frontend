@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import NetflixLogo from "/netflix-logo.png";
 import "../../styles/home.scss";
 import { useAuthStore } from "../../store/userAuthSore";
+import Footer from "../footer";
 
 const AuthPage = () => {
   const { initialValueAuthPage, setInitialValue } = useAuthStore();
@@ -159,6 +160,7 @@ const AuthPage = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };
