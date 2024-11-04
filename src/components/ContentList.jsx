@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 
 // Icons
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { server } from "../store/userAuthSore";
 
 const ContentList = ({ category }) => {
   const { contentType } = useContentStore();
@@ -18,10 +19,9 @@ const ContentList = ({ category }) => {
   useEffect(() => {
     const getContent = async () => {
       try {
-        const response = await axios(
-          `http://localhost:5000/api/v1/${contentType}/${category}`,
-          { withCredentials: true }
-        );
+        const response = await axios(`${server}/${contentType}/${category}`, {
+          withCredentials: true,
+        });
         // console.log(category, " : ", response.data.content);
         setContent(response.data.content);
       } catch (error) {

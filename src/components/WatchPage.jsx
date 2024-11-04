@@ -35,7 +35,7 @@ const WatchPage = () => {
     const FetchTrailers = async () => {
       setTrailerLoading(true);
       try {
-        const res = await axios.get(SERVER + `${contentType}/trailers/${id}`, {
+        const res = await axios.get(SERVER + `/${contentType}/trailers/${id}`, {
           withCredentials: true,
         });
         setTrailers(res.data.trailers.results);
@@ -58,7 +58,7 @@ const WatchPage = () => {
     const FetchSimilarMovies = async () => {
       setSimilarLoading(true);
       try {
-        const res = await axios.get(SERVER + `${contentType}/similar/${id}`, {
+        const res = await axios.get(SERVER + `/${contentType}/similar/${id}`, {
           withCredentials: true,
         });
         setSimilarMovies(res.data.similar.results);
@@ -81,7 +81,7 @@ const WatchPage = () => {
     const FetchMovieDetails = async () => {
       setDetailsLoading(true);
       try {
-        const res = await axios.get(SERVER + `${contentType}/details/${id}`, {
+        const res = await axios.get(SERVER + `/${contentType}/details/${id}`, {
           withCredentials: true,
         });
         setMovieDetails(res.data.details);

@@ -12,11 +12,9 @@ export const useAuthStore = create((set) => ({
     set({ isSigningIn: true });
     let response;
     try {
-      response = await axios.post(
-        "http://localhost:5000/api/v1/auth/signup",
-        credentials,
-        { withCredentials: true }
-      );
+      response = await axios.post(`${server}/auth/signup`, credentials, {
+        withCredentials: true,
+      });
       set({ user: response.data.user, isSigningIn: false });
       toast.success(response.data.message);
       navigate("/");
@@ -35,11 +33,9 @@ export const useAuthStore = create((set) => ({
     set({ isLoggigIn: true });
     let response;
     try {
-      response = await axios.post(
-        "http://localhost:5000/api/v1/auth/login",
-        credentials,
-        { withCredentials: true }
-      );
+      response = await axios.post(`${server}/auth/login`, credentials, {
+        withCredentials: true,
+      });
       set({ user: response.data.user, isSigningIn: false });
       toast.success(response.data.message);
       navigate("/");
@@ -56,10 +52,9 @@ export const useAuthStore = create((set) => ({
   authCheck: async () => {
     console.log("check in authCheck");
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/v1/auth/authcheck",
-        { withCredentials: true }
-      );
+      const response = await axios.get(`${server}/auth/authcheck`, {
+        withCredentials: true,
+      });
       console.log(response.data);
       set({ isAuthenticated: true });
     } catch (error) {
@@ -70,7 +65,7 @@ export const useAuthStore = create((set) => ({
   logout: async (navigate) => {
     try {
       console.warn("check");
-      const res = await axios.get("http://localhost:5000/api/v1/auth/logout", {
+      const res = await axios.get(`${server}/auth/logout`, {
         withCredentials: true,
       });
       set({ user: null, isAuthenticated: false });
@@ -91,3 +86,5 @@ export const useAuthStore = create((set) => ({
     navigate("/signup");
   },
 }));
+
+export const server = `https://netflix-fs-backend.vercel.app/api/v1`;

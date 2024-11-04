@@ -12,4 +12,4 @@ export const TV_CATEGORIES = [
   "top_rated",
 ];
 
-export const SERVER = `http://localhost:5000/api/v1/`;
+export const SERVER = `https://netflix-fs-backend.vercel.app/api/v1`;
