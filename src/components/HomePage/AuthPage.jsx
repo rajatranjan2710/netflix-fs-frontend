@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import NetflixLogo from "/netflix-logo.png";
 import "../../styles/home.scss";
 import { useAuthStore } from "../../store/userAuthSore";
-import Footer from "../footer";
+import Footer from "../Footer.jsx";
 
 const AuthPage = () => {
   const { initialValueAuthPage, setInitialValue } = useAuthStore();
