@@ -1,29 +1,31 @@
-import React from 'react'
-import { useContentStore } from '../store/contentStore';
-import axios from 'axios';
+import React from "react";
+import { useContentStore } from "../store/contentStore";
+import axios from "axios";
+import { server } from "../store/userAuthSore";
 
 const useGetRandomContent = () => {
-  const [content, setContent] = React.useState([]); 
+  const [content, setContent] = React.useState([]);
   const [loading, setLoading] = React.useState(true);
 
-  const {contentType} = useContentStore();
+  const { contentType } = useContentStore();
 
   const getRandomContent = async () => {
-      try {
-        const response = await axios(`http://localhost:5000/api/v1/${contentType}/random`, {withCredentials: true});
-        setContent(response.data.content);
-        console.log(response.data);
-
-      } catch (error) {
-        console.error(error);
-      }
-  }
+    try {
+      const response = await axios(`${server}/${contentType}/random`, {
+        withCredentials: true,
+      });
+      setContent(response.data.content);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   React.useEffect(() => {
     getRandomContent();
-  },[contentType])
+  }, [contentType]);
 
-  return {content, loading}
-}
+  return { content, loading };
+};
 
-export default useGetRandomContent
+export default useGetRandomContent;
