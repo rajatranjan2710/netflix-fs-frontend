@@ -1,0 +1,62 @@
+@import url("../styles/color.css");
+
+.signup-window {
+  width: 100vw;
+  height: 100vh;
+}
+
+.signup-section {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  .signup-container {
+    margin-top: 3.5rem;
+    width: 25rem;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    color: var(--ternery-color);
+
+    align-items: center;
+    > h1 {
+      align-self: flex-start;
+    }
+    > form {
+      width: 100%;
+      margin: 1rem 0;
+      // background-color: aliceblue;
+      .input-container {
+        margin: 1rem 0;
+        .input-label {
+          display: block;
+          font-size: 0.8rem;
+          width: 100%;
+          margin: 0.4rem 0;
+        }
+        .input-field {
+          background-color: rgba(128, 128, 128, 0.142);
+          width: 100%;
+
+          color: aliceblue;
+          padding: 0.5rem 1rem;
+          border: 1px solid rgba(255, 255, 255, 0.129);
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .signup-section {
+    // justify-content: flex-start;
+    align-self: flex-start;
+    .signup-container {
+      margin-top: 0;
+    }
+  }
+}

@@ -1,0 +1,107 @@
+.navbar {
+  // background-color: antiquewhite;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 6rem;
+  z-index: 50;
+  position: relative;
+  //   background-color: #232323;
+  .left {
+    // background-color: aliceblue;
+    display: flex;
+    align-items: center;
+    .logo-container-navbar {
+      width: 8rem;
+      display: flex;
+      align-items: center;
+      .logo-image-navbar {
+        width: 100%;
+      }
+    }
+    .navbar-options {
+      position: relative;
+      padding: 0 0.7rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      .link {
+        text-decoration: none;
+        color: white;
+      }
+      .link:hover {
+        color: gray;
+      }
+      z-index: 55;
+    }
+  }
+  .right {
+    // background-color: aqua;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    cursor: pointer;
+    .profile {
+      width: 2rem;
+      img {
+        width: 100%;
+      }
+    }
+    .hamburger {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1.4rem;
+    .left {
+      .logo-container-navbar {
+        width: 7rem;
+      }
+      .navbar-options {
+        display: none;
+      }
+    }
+    .right {
+      .profile {
+        width: 1.5rem;
+      }
+      .hamburger {
+        display: inline;
+      }
+    }
+  }
+  .drop-downs {
+    display: block;
+    color: white;
+    // background-color: black;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 1s ease-in-out, opacity 0.5s ease-in-out;
+    .navbar-options {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      .option {
+        padding: 0.5rem 1rem;
+
+        .link {
+          color: white;
+          text-decoration: none;
+        }
+      }
+      .option:hover {
+        background-color: #2d2d2d;
+      }
+    }
+  }
+  .drop-downs.show {
+    max-height: 1000px; /* Adjust if necessary */
+    opacity: 1;
+  }
+}

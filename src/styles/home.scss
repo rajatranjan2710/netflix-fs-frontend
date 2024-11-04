@@ -1,0 +1,609 @@
+@import "../styles/color.css";
+
+//*********auth page styles**************//
+.header-right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .header-language {
+    padding: 0.5rem 1rem;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+  }
+  .header-signin-button {
+    padding: 0.5rem 1rem;
+    background-color: red;
+    border-radius: 5px;
+    > .link-header-right {
+      color: white;
+      text-decoration: none;
+    }
+  }
+}
+
+//Hero Sections styles
+
+.hero-section {
+  height: 100%;
+  // background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--ternery-color);
+  > .hero-container {
+    padding: 2rem;
+    margin-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    > h1 {
+      padding: 0.4rem;
+    }
+    > h6 {
+      font-size: 0.8rem;
+      font-weight: 400;
+      line-height: 0.9rem;
+      padding: 0.4rem;
+    }
+    .hero-input-container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin: 0.4rem;
+      gap: 1rem;
+      > input {
+        padding: 0.8rem 1rem;
+        width: 20rem;
+        background-color: var(--input-color);
+        outline: none;
+        border: 1px solid gray;
+        border-radius: 5px;
+        font-size: 1rem;
+      }
+      > .input-button {
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+        list-style: 0.9rem;
+        background-color: red;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// styles for .seperator
+
+.seperator {
+  height: 0.2rem;
+  width: 100vw;
+  background-color: #232323;
+}
+
+// section 2 styling
+
+.authpage-section-2 {
+  width: 100vw;
+  padding: 2.5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  > .container {
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    > .left {
+      text-align: center;
+
+      > h2 {
+        margin: 0.8rem 0;
+        font-size: 2rem;
+      }
+      > h6 {
+        font-size: 1.1rem;
+      }
+    }
+    > .right {
+      position: relative;
+      > img {
+        width: 80%;
+        position: relative;
+        z-index: 20;
+      }
+
+      //to fit the video inside tv image
+      > .video-section-2 {
+        width: 75%;
+        position: absolute;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+//section 3 styling
+
+.authpage-section-3 {
+  width: 100vw;
+
+  padding: 2.5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+
+  .container {
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    > .left {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > .lg-image {
+        width: 80%;
+      }
+      > .inner-div {
+        position: absolute;
+        background-color: black;
+        justify-content: space-around;
+        border-radius: 5px;
+        border: 1px solid gray;
+        display: flex;
+        height: 20%;
+        width: 50%;
+        top: 75%;
+
+        > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          > h6 {
+            font-size: 1rem;
+          }
+          > .downloading {
+            margin-top: 0.3rem;
+            font-size: 0.8rem;
+            color: rgb(185, 185, 248);
+          }
+        }
+      }
+    }
+    > .right {
+      text-align: center;
+
+      > h2 {
+        margin: 0.8rem 0;
+        font-size: 2rem;
+      }
+      > h6 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+//section 4 styling
+
+.authpage-section-4 {
+  width: 100vw;
+  padding: 2.5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  > .container {
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    > .left {
+      text-align: center;
+
+      > h2 {
+        margin: 0.8rem 0;
+        // line-height;
+        font-size: 2rem;
+      }
+      > h6 {
+        font-size: 1.1rem;
+      }
+    }
+    > .right {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // border: 1px solid red;
+      > img {
+        width: 80%;
+        position: relative;
+        z-index: 20;
+      }
+
+      //to fit the video inside tv image
+      > .video-section-2 {
+        width: 52%;
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+//sections 5 styling
+.authpage-section-5 {
+  width: 100vw;
+  padding: 2.5rem;
+  background-color: black;
+  color: white;
+  display: flex;
+
+  .container {
+    margin: auto;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    > .left {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > .lg-image {
+        width: 80%;
+      }
+    }
+    > .right {
+      text-align: center;
+
+      > h2 {
+        margin: 0.8rem 0;
+        font-size: 2rem;
+      }
+      > h6 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+}
+
+//responsiveness
+@media (max-width: 768px) {
+  .header-right-buttons {
+    // background-color: aqua;
+    // margin-left: 1rem;
+    gap: 0.4rem;
+  }
+  .header-language {
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .header-signin-button {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  .hero-section {
+    .hero-container {
+      padding: 0 1.7rem;
+      margin-top: 1rem;
+      > h1 {
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      > h6 {
+        font-size: 1rem;
+        text-align: center;
+        line-height: 1.2rem;
+      }
+      .hero-input-container {
+        align-items: center;
+        justify-content: center;
+        margin-top: 1rem;
+        > input {
+          width: 15rem;
+        }
+      }
+    }
+  }
+
+  .authpage-section-2 {
+    width: 100vw;
+    .container {
+      .left {
+        > h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      .right {
+        > img {
+          width: 100%;
+        }
+        > .video-section-2 {
+          object-fit: contain;
+          width: 90%;
+          top: 50%;
+          left: 50%;
+        }
+      }
+    }
+  }
+  .authpage-section-3 {
+    .container {
+      .left {
+        margin-bottom: 1rem;
+        > .lg-image {
+          width: 100%;
+        }
+        > .inner-div {
+          width: 70%;
+          top: 70%;
+          > div {
+            h6 {
+              font-size: 0.8rem;
+            }
+            .downloading {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+      .right {
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+
+  .authpage-section-4 {
+    .container {
+      .left {
+        > h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+      .right {
+        > img {
+          width: 100%;
+        }
+        > .video-section-2 {
+          object-fit: contain;
+          width: 60%;
+          left: 50%;
+        }
+      }
+    }
+  }
+  .authpage-section-5 {
+    .container {
+      .left {
+        margin-bottom: 1rem;
+        > .lg-image {
+          width: 100%;
+        }
+        > .inner-div {
+          width: 70%;
+          top: 70%;
+          > div {
+            h6 {
+              font-size: 0.8rem;
+            }
+            .downloading {
+              font-size: 0.6rem;
+            }
+          }
+        }
+      }
+      .right {
+        h2 {
+          font-size: 1.5rem;
+        }
+        p {
+          font-size: 0.9rem;
+        }
+      }
+    }
+  }
+}
+
+//*************Home page styles*************//
+
+.home-page-section {
+  position: relative;
+  height: 100vh;
+  // background-color: #232323;
+}
+
+.shimmer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Adjust according to your image size */
+  background: linear-gradient(to right, #2c2c2c 4%, #333 25%, #2c2c2c 36%);
+  background-size: 1200px 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1200px 0;
+  }
+  100% {
+    background-position: 1200px 0;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.poster {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -50;
+  object-fit: cover;
+}
+.poster-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
+  z-index: -50; /* Ensure it's above the poster but below other elements */
+}
+
+.content-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 1.4rem; /* px-8 */
+  padding-right: 1.4rem; /* px-8 */
+
+  @media (min-width: 768px) {
+    padding-left: 4rem; /* md:px-16 */
+    padding-right: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 6rem; /* lg:px-32 */
+    padding-right: 6rem;
+  }
+
+  .gradient-overlay {
+    background: linear-gradient(to bottom, black, transparent, transparent);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -10;
+  }
+  .content-hero {
+    color: white;
+    max-width: 42rem;
+    // background-color: aliceblue;
+    .hero-title {
+      font-weight: bolder;
+      font-size: 2.7rem;
+      margin: 0.3rem 0;
+    }
+    .release-date {
+      margin-top: 1rem;
+      font-weight: 500;
+    }
+    .content-desc {
+      font-size: 1rem;
+      margin: 0.2rem 0;
+
+      @media (max-width: 768px) {
+        margin-top: 0.3rem;
+        font-size: 0.9rem;
+        line-height: 1.6;
+      }
+    }
+    .button {
+      display: flex;
+      margin-top: 1rem;
+      gap: 1rem;
+      .watch {
+        // max-width: 8rem;
+        background-color: aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+        .link {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          text-decoration: none;
+          color: #232323;
+        }
+      }
+      .details {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0.6rem 1rem;
+        border-radius: 5px;
+        background-color: red;
+        .link-details {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 0.2rem;
+    }
+  }
+}
+
+//home section 2
+
+.home-section-2 {
+  background-color: black;
+  color: white;
+  padding: 2rem 1.4rem;
+
+  @media (min-width: 768px) {
+    padding: 2rem 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 2rem 6rem;
+  }
+}

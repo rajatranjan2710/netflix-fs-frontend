@@ -1,0 +1,182 @@
+/* Main Page Styles */
+.search-history-page {
+  background-color: black;
+  color: white;
+  min-height: 100vh;
+  padding: 0; /* Remove padding for the main page */
+}
+
+.container {
+  max-width: 1200px; /* Maximum width for larger screens */
+  width: 100%; /* Full width for mobile */
+  padding: 1rem; /* Add padding only to the top/bottom */
+  margin: 0 auto; /* Centering the container */
+  overflow: hidden; /* Prevent overflow on the left/right */
+}
+
+/* Title Styles */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+/* No Results Styles */
+.no-results {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+  font-size: 20px;
+}
+
+/* Search Grid Styles */
+.search-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 0; /* Remove padding to eliminate excess space */
+}
+
+/* Individual Search History Item Styles */
+.search-history-item {
+  background-color: #333;
+  border-radius: 8px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Distribute space between children */
+  transition: background-color 0.3s; /* Add a transition for hover effect */
+}
+
+.search-history-item:hover {
+  background-color: #444; /* Darker background on hover */
+}
+
+/* Image Styles */
+.search-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+/* Search Details Styles */
+.search-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* History Name Styles */
+.history-name {
+  font-size: 16px;
+  font-weight: bold;
+  overflow: hidden; /* Hide overflowing text */
+  text-overflow: ellipsis; /* Add ellipsis for overflowed text */
+  white-space: nowrap; /* Prevent text from wrapping to a new line */
+  display: block; /* Ensure it behaves as a block element */
+  max-width: 200px; /* Set a fixed width or max-width */
+}
+
+/* Created At Styles */
+.created-at {
+  font-size: 14px;
+  color: gray;
+}
+
+/* Right Most Container Styles */
+.right-most-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  margin-left: auto; /* Pushes this container to the right */
+}
+
+/* Type Badge Styles */
+.type {
+  padding: 4px 8px;
+  border-radius: 12px;
+  margin-left: 8px; /* Space between type label and delete icon */
+}
+
+/* Type Background Colors */
+.type.Movie {
+  background-color: red;
+}
+
+.type.Tv {
+  background-color: blue;
+}
+
+.type.Person {
+  background-color: green;
+}
+
+/* Delete Icon Styles */
+.delete-icon {
+  cursor: pointer;
+  margin-left: 16px;
+  font-size: 1.2rem;
+  transition: transform 0.2s, color 0.2s; /* Add transitions for effect */
+}
+
+.delete-icon:hover {
+  transform: scale(1.2);
+  color: rgb(175, 9, 9);
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 600px) {
+  .search-grid {
+    place-items: center;
+  }
+  .search-history-item {
+    padding: 12px; /* Adjust padding for smaller screens */
+    justify-content: space-between; /* Space out items */
+    margin: auto;
+    place-self: center;
+    min-width: 280px;
+  }
+
+  .search-image {
+    width: 40px; /* Smaller image size for mobile */
+    height: 40px; /* Smaller height for mobile */
+  }
+
+  .search-details {
+    flex-grow: 1;
+  }
+
+  .history-name {
+    font-size: 0.8rem;
+    max-width: 120px;
+  }
+
+  .right-most-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .title {
+    font-size: 20px; /* Adjust title size for mobile */
+  }
+
+  .no-results {
+    font-size: 18px; /* Adjust font size for no results */
+  }
+}
+
+/* Responsive Grid Styles */
+@media (max-width: 1200px) {
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+  }
+}
+
+@media (max-width: 900px) {
+  .search-grid {
+    grid-template-columns: repeat(1, 1fr); /* 1 column on small screens */
+  }
+}

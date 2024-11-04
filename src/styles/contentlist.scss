@@ -1,0 +1,112 @@
+.content-list {
+  position: relative;
+  color: white;
+  margin: 3rem 0;
+
+  h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .no-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 6rem;
+    // background-color: red;
+  }
+
+  .slider {
+    display: flex;
+    overflow-x: scroll;
+    gap: 1rem;
+    // position: relative;
+
+    /* Hide scrollbar styles for different browsers */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    // flex-shrink: 0;
+
+    .content-list-link {
+      min-width: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 0.6rem;
+
+      .content-list-poster-container {
+        width: 290px;
+        height: 170px;
+        overflow: hidden;
+        border-radius: 10px;
+
+        .content-list-poster {
+          width: 100%;
+          object-fit: contain;
+          border-radius: 10px;
+
+          &:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s ease-in-out;
+          }
+        }
+      }
+
+      .content-name {
+        color: white;
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  .left-icon,
+  .right-icon {
+    position: absolute;
+    top: 60%; /* Center vertically */
+    transform: translateY(-60%);
+    background-color: #232322;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 50%;
+    opacity: 0.8; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+  }
+
+  .left-icon {
+    left: 20px;
+  }
+
+  .right-icon {
+    right: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .left-icon,
+    .right-icon {
+      background-color: rgba(0, 0, 0, 0.3);
+      opacity: 1;
+      padding: 0.6rem;
+    }
+    .left-icon {
+      left: 10px;
+    }
+    .right-icon {
+      right: 10px;
+    }
+  }
+}
